@@ -1,0 +1,116 @@
+﻿@inject ITimesheetRepository Repository
+
+@if (Timesheet is not null)
+{
+    <EditForm Enhance="true" method="post" FormName="AddOrEditTimesheetForm" OnValidSubmit="AddOREditTimesheet" Model="Timesheet" autocomplete="off">
+        <h3>
+            @Title
+        </h3>
+        @if (IsEditTimesheet)
+        {
+            <input type="hidden" name="Timesheet.Id" value="@Timesheet.Id" />
+        }
+               
+        <div class="mb-3">
+            <label for="building" class="form-label">
+                Building
+            </label>
+            <InputText id="building" @bind-Value="Timesheet.Building" class="form-control shadow-none" />
+        </div>
+
+        <div class="mb-3">
+            <label for="unit" class="form-label">
+                Unit
+            </label>
+            <InputText id="unit" @bind-Value="Timesheet.Unit" class="form-control shadow-none" />
+        </div>
+
+        <div class="mb-3">
+            <label for="hours" class="form-label">
+                No. of hours
+            </label>
+            <InputNumber id="hours" @bind-Value="Timesheet.Hours" class="form-control shadow-none" />
+        </div>
+
+        <div class="mb-3">
+            <label for="materialCost" class="form-label">
+                Material Cost
+            </label>
+            <InputText id="materialCost" @bind-Value="Timesheet.MaterialCost" class="form-control shadow-none" />
+        </div>
+
+        <div class="mb-3">
+            <label for="otherCharges" class="form-label">
+                Other Charges
+            </label>
+            <InputText id="otherCharges" @bind-Value="Timesheet.OtherCharges" class="form-control shadow-none" />
+        </div>
+
+        <div class="mb-3">
+            <label for="date" class="form-label">
+                Date
+            </label>
+            <InputDate id="date" @bind-Value="Timesheet.Date" class="form-control shadow-none" />
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">
+                Description
+            </label>
+            <InputText id="description" @bind-Value="Timesheet.Description" class="form-control shadow-none" />
+        </div>
+
+        <div class="mb-3">
+            <label for="workOrder" class="form-label">
+                Work Order
+            </label>
+            <InputText id="workOrder" @bind-Value="Timesheet.WorkOrder" class="form-control shadow-none" />
+        </div>
+
+        <div class="mb-3">
+            <button class="btn btn-primary shadow-none">
+                Submit
+            </button>
+            <a href="/" class="btn btn-secondary shadow-none ms-3">
+                <!-- remove data-enhnace-nav="false"-->
+                Back to List
+            </a>
+
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+        </div>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public bool IsEditTimesheet { get; set; } = false;
+
+    [Parameter]
+    public int TimesheetId { get; set; }
+
+    [Parameter]
+    public EventCallback<Timesheet> OnValidTimesheetSubmit { get; set; }
+
+    [SupplyParameterFromForm]
+    public Timesheet? Timesheet { get; set; }
+
+    private string Title => IsEditTimesheet ? $"Edit Book {TimesheetId}" : "Add New Book";
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (IsEditTimesheet)
+        {
+            Timesheet ??= await Repository.GetByIdAsync(TimesheetId);
+        }
+        else
+        {
+            Timesheet ??= new();
+        }
+    }
+
+    private async Task AddOREditTimesheet()
+    {
+        await OnValidTimesheetSubmit.InvokeAsync(Timesheet);
+    }
+}

@@ -1,0 +1,21 @@
+﻿@page "/add-new"
+@inject ITimesheetRepository Repository
+@inject NavigationManager Navigation
+
+<PageTitle>Add New Timesheet</PageTitle>
+
+<div class="row justify-content-center">
+    <div class="col-6">
+        <TimesheetForm IsEditTimesheet="false" OnValidTimesheetSubmit="AddTimesheet" />
+    </div>
+</div>
+
+
+@code {
+
+    private async Task AddTimesheet(Timesheet timesheet)
+    {
+        await Repository.AddAsync(timesheet);
+        Navigation.NavigateTo("/");
+    }
+}

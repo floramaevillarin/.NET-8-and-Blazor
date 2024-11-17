@@ -1,0 +1,42 @@
+﻿@inject ITimesheetRepository Repository
+@inject NavigationManager Navigation
+
+<div class="timesheet-card">
+    <div class="timesheet-card-body">
+        <h5>@Timesheet.Building</h5>
+    </div>
+    <div class="actions">
+        <a href="@($"/edit/{Timesheet.Id}")" class="btn btn-warning shadow-none">
+            Edit
+        </a>
+        <button @onclick="OpenConfirmDialog" class="btn btn-danger shadow-none ms-3">
+            Delete
+        </button>
+    </div>
+</div>
+
+<DeleteConfirmDialog Show="showConfirmDialog" OnCancel="CancelDelete" OnOK="DeleteBook"/>
+
+@code {
+    private bool showConfirmDialog;
+
+    [Parameter]
+    public required Timesheet Timesheet { get; set; }
+
+    private void OpenConfirmDialog()
+    {
+        showConfirmDialog = true;
+    }
+
+    private void CancelDelete()
+    {
+        showConfirmDialog = false;
+    }
+
+    private async Task DeleteBook()
+    {
+        await Repository.DeleteByIdAsync(Timesheet.Id);
+        showConfirmDialog = false;
+        Navigation.NavigateTo("/");
+    }
+}

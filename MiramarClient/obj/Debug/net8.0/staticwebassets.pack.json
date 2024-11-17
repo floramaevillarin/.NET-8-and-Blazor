@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Miramar\\MiramarClient\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MiramarClient.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MiramarClient.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Miramar\\MiramarClient\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Miramar\\MiramarClient\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Miramar\\MiramarClient\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Miramar\\MiramarClient\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MiramarClient.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MiramarClient.props",
+      "PackagePath": "build\\MiramarClient.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MiramarClient.props",
+      "PackagePath": "buildMultiTargeting\\MiramarClient.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MiramarClient.props",
+      "PackagePath": "buildTransitive\\MiramarClient.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

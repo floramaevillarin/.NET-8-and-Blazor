@@ -1,0 +1,42 @@
+﻿@page "/"
+@inject ITimesheetRepository Repository
+@rendermode InteractiveServer
+
+<PageTitle>Timesheets</PageTitle>
+
+<div class="row justify-content-center">
+    <div class="col-6">
+        <a href="add-new" class="btn btn-primary shadow-none mb-3">
+            Add New
+        </a>
+        @if (timesheets is null)
+        {
+            <div class="timesheet-item">
+                Loading timeshets. Please wait...
+            </div>
+        }
+        else if (timesheets.Any())
+        {
+            @foreach(var timesheet in timesheets)
+            {
+                <div class="timesheet-item">
+                    <TimesheetCard @rendermode=InteractiveServer Timesheet="timesheet" />
+                </div>
+            }
+        }else{
+            <div class="book-item">
+                No books found
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+
+    private List<Timesheet>? timesheets;
+
+    protected override async Task OnInitializedAsync()
+    {
+        timesheets = await Repository.GetAllAsync();
+    }
+}

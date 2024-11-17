@@ -1,0 +1,29 @@
+﻿
+@page "/edit/{id:int}"
+@inject ITimesheetRepository Reposiitory
+@inject NavigationManager Navigation
+
+<PageTitle>Edit Timesheet</PageTitle>
+
+
+<div class="row justify-content-center">
+    <div class="col-6">
+        <TimesheetForm IsEditTimesheet="true" TimesheetId="@Id" OnValidTimesheetSubmit="EditTimesheet" />
+    </div>
+</div>
+
+
+
+@code {
+
+    [Parameter]
+    public int Id { get; set; }
+
+
+    private async Task EditTimesheet(Timesheet timesheet)
+    {
+        await Reposiitory.UpdateAsync(timesheet);
+        Navigation.NavigateTo("/");
+    }
+
+}
