@@ -1,0 +1,11 @@
+C:\Miramar\Miramar.Domain\bin\Debug\net8.0\Miramar.Domain.deps.json
+C:\Miramar\Miramar.Domain\bin\Debug\net8.0\Miramar.Domain.dll
+C:\Miramar\Miramar.Domain\bin\Debug\net8.0\Miramar.Domain.pdb
+C:\Miramar\Miramar.Domain\obj\Debug\net8.0\Miramar.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Miramar\Miramar.Domain\obj\Debug\net8.0\Miramar.Domain.AssemblyInfoInputs.cache
+C:\Miramar\Miramar.Domain\obj\Debug\net8.0\Miramar.Domain.AssemblyInfo.cs
+C:\Miramar\Miramar.Domain\obj\Debug\net8.0\Miramar.Domain.csproj.CoreCompileInputs.cache
+C:\Miramar\Miramar.Domain\obj\Debug\net8.0\Miramar.Domain.dll
+C:\Miramar\Miramar.Domain\obj\Debug\net8.0\refint\Miramar.Domain.dll
+C:\Miramar\Miramar.Domain\obj\Debug\net8.0\Miramar.Domain.pdb
+C:\Miramar\Miramar.Domain\obj\Debug\net8.0\ref\Miramar.Domain.dll

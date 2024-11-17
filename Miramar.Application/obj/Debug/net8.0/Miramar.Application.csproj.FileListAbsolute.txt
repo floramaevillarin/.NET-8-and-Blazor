@@ -1,0 +1,15 @@
+C:\Miramar\Miramar.Application\bin\Debug\net8.0\Miramar.Application.deps.json
+C:\Miramar\Miramar.Application\bin\Debug\net8.0\Miramar.Application.dll
+C:\Miramar\Miramar.Application\bin\Debug\net8.0\Miramar.Application.pdb
+C:\Miramar\Miramar.Application\obj\Debug\net8.0\Miramar.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Miramar\Miramar.Application\obj\Debug\net8.0\Miramar.Application.AssemblyInfoInputs.cache
+C:\Miramar\Miramar.Application\obj\Debug\net8.0\Miramar.Application.AssemblyInfo.cs
+C:\Miramar\Miramar.Application\obj\Debug\net8.0\Miramar.Application.csproj.CoreCompileInputs.cache
+C:\Miramar\Miramar.Application\obj\Debug\net8.0\Miramar.Application.dll
+C:\Miramar\Miramar.Application\obj\Debug\net8.0\refint\Miramar.Application.dll
+C:\Miramar\Miramar.Application\obj\Debug\net8.0\Miramar.Application.pdb
+C:\Miramar\Miramar.Application\obj\Debug\net8.0\ref\Miramar.Application.dll
+C:\Miramar\Miramar.Application\bin\Debug\net8.0\Miramar.Domain.dll
+C:\Miramar\Miramar.Application\bin\Debug\net8.0\Miramar.Domain.pdb
+C:\Miramar\Miramar.Application\obj\Debug\net8.0\Miramar.Application.csproj.AssemblyReference.cache
+C:\Miramar\Miramar.Application\obj\Debug\net8.0\Miramar..722AACEE.Up2Date
