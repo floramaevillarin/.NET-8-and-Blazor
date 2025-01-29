@@ -1,4 +1,4 @@
-# Full-Stack Timesheet Management System
+# Timesheet and invoicing Management System
 
 This project is a step-by-step guide to building a full-stack timesheet management system using **Blazor** and **Entity Framework Core** in **.NET 8**. It demonstrates how to implement CRUD (Create, Read, Update, Delete) operations with a focus on efficiently managing timesheet data.
 
@@ -7,17 +7,12 @@ This project is a step-by-step guide to building a full-stack timesheet manageme
 - **Entity Framework Core Setup**  
   Configure Entity Framework Core for seamless database interactions.
 
-- **Data Model Design**  
-  Create a robust data model tailored specifically for timesheet management.
-
 - **Blazor UI Development**  
-  Build a user-friendly Blazor UI for seamless interaction with the database.
+  Using .net8, build a user-friendly Blazor UI for seamless interaction with the database.
 
-- **Data Deletion Handling**  
-  Implement data deletion, including support for soft deletes and cascading effects.
+- **Deployed**  
+  Hosted on AWS EC2 with RDS for database management.
 
-- **Best Practices**  
-  Apply best practices for data validation, error handling, and performance optimization.
 
 ## Who Is This For?
 
